@@ -34,8 +34,6 @@
             justify-content: center;
             align-items: center;
             gap: 2px;
-            /* padding: 0;
-            margin: 0; */
         }
 
         span {
@@ -55,8 +53,6 @@
         tbody {
             font-size: 9px;
             background-color: darkgray;
-            /* padding: 3px;
-            margin: 3px; */
             text-align: center;
             color: black;
         }
@@ -74,8 +70,9 @@
     <input type="text" id="textoTaxaJuros" placeholder="Valor da Taxa de Juros (%)">
     <input type="text" id="textoPrazo" placeholder="Prazo (em meses)">
     <div>
-        <input id="comCarencia" type="checkbox"><span>Com carência?</span>
-        <select name="" id="listaSuspensa" hidden>
+        <input id="comCarencia" type="checkbox" hidden>
+        <span hidden>Com carência?</span>          <!-- para implementação futura, financiamento com carência -->
+        <select name="" id="listaSuspensa" hidden> <!-- para implementação futura, financiamento com carência -->
             <option value="2">2 meses</option>
             <option value="3">3 meses</option>
             <option value="4">4 meses</option>
