@@ -1,6 +1,6 @@
 import {Parcela} from './parcela.js'
 
-class Financiamento{
+export class Financiamento{
     #taxaJuros; // juros mensais
     #prazo; // em meses
     #parcelas = [];
@@ -32,7 +32,14 @@ class Financiamento{
     exibeParcelas(){
         const parcelas = this.#parcelas.slice(1); //copiar o vetor de parcelas a partir do ID 1 (1ª parcela)
         for (const parcela of parcelas) {
-            index
+            const linha = corpoTabela.insertRow(-1); //inserir uma linha no final da tabela
+            for (const dado of parcela.getDadosFormatados()) {
+                const celula = linha.insertCell(-1); //inserir uma célula após a última célula da tabela
+                celula.textContent = dado; //inserir o contéudo dentro da célula criada
+            }
         }
+    }
+    getParcelas(){
+        return this.#parcelas;
     }
 }
