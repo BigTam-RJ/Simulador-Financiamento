@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Financiamento</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font: 10pt Tahoma;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        input[type="text"]{
+            width: 170px;
+            text-align: center;
+            ::backdrop
+        }
+        button{
+            width: 80px;
+            padding: 2px 0;
+        }
+        div{
+            width: 100%;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            gap: 2px;
+            /* padding: 0;
+            margin: 0; */
+        }
+        span{
+           font-size: 12px;
+           padding-bottom: 2px;
+           margin: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Simulador de Financiamento com Sistema de Amortização Constante (SAC)</h2>
+    <input type="text" id="textoValor" placeholder="Valor do Bem">
+    <input type="text" id="textoEntrada" placeholder="Valor da Entrada">
+    <input type="text" id="textoTaxaJuros" placeholder="Valor da Taxa de Juros (%)">
+    <input type="text" id="textoPrazo" placeholder="Prazo (em meses)">
+    <div>
+        <input id="comCarencia" type="checkbox"><span>Com carência?</span>
+        <select name="" id="listaSuspensa" hidden>
+            <option value="2">2 meses</option>
+            <option value="3">3 meses</option>
+            <option value="4">4 meses</option>
+        </select>
+        
+    </div>
+    <button id="botaoCalcular">Calcular</button>
+
+    <script src="./script.js" type="module"></script>
+</body>
+
+</html>
